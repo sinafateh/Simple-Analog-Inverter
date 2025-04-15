@@ -8,15 +8,15 @@ This project demonstrates a basic **DC to AC inverter** built entirely with anal
 ## 🧠 How It Works
 
 1. **Pulse Generation with 555 Timer**
-   - The 555 timer is configured in **astable mode** to generate a square wave of approximately **299 Hz**.
+   - The 555 timer is configured in **astable mode** to generate a square wave of approximately **200 Hz**.
 
 2. **Frequency Division with CD4017**
    - The square wave signal is fed into a **CD4017 decade counter**.
    - The counter sequentially activates output pins (Q0–Q9) with each pulse.
-   - We use **Q2 and Q4** outputs to generate alternating signals to control the switching of MOSFETs.
+   - We use **Q0 and Q2** outputs to generate alternating signals to control the switching of MOSFETs.
 
 3. **MOSFET Switching**
-   - Two **MOSFETs** (e.g., **IRF540N**) receive the signals from the CD4017 and switch the DC power to the transformer's primary side alternately.
+   - Two **MOSFETs** (e.g., **IRFZ44N**) receive the signals from the CD4017 and switch the DC power to the transformer's primary side alternately.
 
 4. **Voltage Step-Up via Transformer**
    - The transformer (e.g., 12V to 220V) steps up the switched DC to **220V AC** (square wave).
@@ -29,7 +29,7 @@ This project demonstrates a basic **DC to AC inverter** built entirely with anal
 |----------|----------|-------------|
 | IC 555 | 1 | Pulse generator |
 | CD4017 | 1 | Decade counter |
-| IRF540N MOSFET | 2 | Power switching |
+| IRFZ44N MOSFET | 2 | Power switching |
 | Transformer 12V to 220V | 1 | Voltage step-up |
 | Resistors & Capacitors | Several | For timer tuning |
 | DC Power Source | 1 | Input supply (e.g., 12V battery) |
@@ -51,6 +51,10 @@ This project demonstrates a basic **DC to AC inverter** built entirely with anal
 
 ## 📸 Project Images (optional)
 > Include circuit diagrams, breadboard layout, or real-life build photos here.
+![image](https://github.com/user-attachments/assets/c831efc1-5e10-442e-9195-119312cd4167)
+![image](https://github.com/user-attachments/assets/7ef1d7bc-c44a-4ecf-954c-eed85a5aba4a)
+![image](https://github.com/user-attachments/assets/64cfa857-88d5-4648-b53c-0449e4618e28)
+![image](https://github.com/user-attachments/assets/a73da09b-e7af-4dc8-9a05-13f32f6a3b7b)
 
 ---
 
